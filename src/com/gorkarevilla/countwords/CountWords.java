@@ -90,10 +90,13 @@ public class CountWords {
 					// First clean it
 					word = cleanWord(word);
 
+
+					//Convert to lower case to avoid repeating the same word
+					word = word.toLowerCase();
+					
 					// If the word is not in the Exclusion list, add to the
 					// table words.
-					// To make the comparison, all the words are in lowercase.
-					if (!EXCLUDE_LIST.contains(word.toLowerCase())) {
+					if (!EXCLUDE_LIST.contains(word)) {
 
 						// If it is in the table update it, otherwise insert in
 						// the table
